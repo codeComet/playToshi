@@ -1,0 +1,58 @@
+.App {
+  background-color: #030101f6;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.navBar {
+  background-color: black;
+}
+
+.header {
+  padding-bottom: 40px;
+}
+
+.header h1 {
+  color: rgb(255, 255, 255);
+  margin: 20px 40px;
+  font-size: 30px;
+}
+
+.img-gallery {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttonContainer {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.buttonContainer Button {
+  background: #7b4397; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #dc2430,
+    #7b4397
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #dc2430,
+    #7b4397
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 60px;
+}
+
+.pagination {
+  margin: 20px auto;
+  text-align: center;
+}

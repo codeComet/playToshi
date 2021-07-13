@@ -1,0 +1,51 @@
+.parent-row {
+  padding: 50px 0px;
+}
+
+.row {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parent-row h1 {
+  color: rgb(255, 255, 255);
+  margin: 0px 0px 50px 40px;
+  font-size: 30px;
+}
+
+.parent {
+  width: 270px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+.avatar {
+  margin-right: 30px;
+}
+
+.desc {
+  margin-top: 10px;
+}
+
+.parent .avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.userName {
+  color: #fff;
+  font-size: 20px;
+}
+
+.sales {
+  color: #555555;
+}
