@@ -17,7 +17,6 @@ function App() {
       <div className="App">
         {/* Navbar */}
         <NavbarTop />
-
         {/* Router  */}
         <Switch>
           <Route path="/" exact component={Home} />

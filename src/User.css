@@ -4,6 +4,7 @@
 
 .user-header {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .user-info {

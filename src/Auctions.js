@@ -3,18 +3,10 @@ import "./Auctions.css";
 import { Card, Button, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Auctions({ image, time, user, product, avatar, price }) {
+function Auctions({ image, time, user, product, avatar, price, hide }) {
   return (
     <div className="cards">
-      <Card
-        style={{
-          width: "18rem",
-          color: "#fff",
-          backgroundColor: "black",
-          border: "1px solid #555",
-          padding: "10px 20px 20px",
-        }}
-      >
+      <Card className="card_single">
         <Card.Img variant="top" src={image} />
         <Card.Body>
           <Badge variant="warning">{time}</Badge>
@@ -30,11 +22,13 @@ function Auctions({ image, time, user, product, avatar, price }) {
         </Card.Body>
         <div className="card-bottom">
           <p>${price}</p>
-          <Link to="/items">
-            <Button variant="primary" size="sm">
-              Purchase
-            </Button>
-          </Link>
+          {hide ? null : (
+            <Link to="/items">
+              <Button variant="primary" size="sm">
+                Purchase
+              </Button>
+            </Link>
+          )}
         </div>
       </Card>
     </div>

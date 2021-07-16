@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Nav, Navbar, Button, Modal, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavbarTop.css";
@@ -16,18 +16,16 @@ function NavbarTop() {
   const handleShowSignup = () => setShowSignup(true);
 
   const walletUrl = "/wallet";
-
+  let currentPath = window.location.pathname;
   const [hide, setHide] = useState(false);
 
-  const hideButton = () => {
-    let currentPath = window.location.pathname;
-    console.log(currentPath);
+  useEffect(() => {
     if (currentPath === walletUrl) {
       setHide(true);
     } else {
       setHide(false);
     }
-  };
+  }, [currentPath]);
 
   return (
     <Navbar className="navBar" variant="dark" expand="lg" sticky="top">
@@ -46,10 +44,7 @@ function NavbarTop() {
           </Nav.Link>
           {!hide ? (
             <Link to="/wallet">
-              <Button variant="outline-warning" onClick={hideButton}>
-                {" "}
-                Connect your wallet{" "}
-              </Button>
+              <Button variant="outline-warning"> Connect your wallet </Button>
             </Link>
           ) : null}
         </Nav>
@@ -88,7 +83,11 @@ function NavbarTop() {
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
             <Link to="/user">
-              <Button variant="primary" type="submit">
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={handleCloseLogin}
+              >
                 Login
               </Button>
             </Link>
