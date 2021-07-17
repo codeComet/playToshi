@@ -1,6 +1,7 @@
 import React from "react";
-import { Nav, Navbar, Button } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./NavbarUser.css";
 
 function NavbarUser() {
   return (
@@ -18,11 +19,11 @@ function NavbarUser() {
             <Nav.Link href="#link">My Items</Nav.Link>
             <Nav.Link href="#link">Following</Nav.Link>
             <Nav.Link href="#link">Activity</Nav.Link>
-            <Button variant="outline-primary" className="mr-sm-2">
+            <a href="#link" className="nft_btn">
               Create NFT
-            </Button>
+            </a>
             <div className="balance">
-              <img src="" alt="coin" />
+              <img src="./icons/dollar.png" alt="coin" />
               <p>13,412 BNB</p>
             </div>
           </Nav>

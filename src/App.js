@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Button, Pagination } from "react-bootstrap";
 import Gallery from "./Gallery";
@@ -7,16 +8,23 @@ import Auctions from "./Auctions";
 import Footer from "./Footer";
 import NavbarTop from "./NavbarTop";
 import Wallet from "./Wallet";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Items from "./Items";
 import User from "./User";
+import NavbarUser from "./NavbarUser";
 
 function App() {
+  const [activeUrl, setActiveUrl] = useState();
+  let appLocation = useLocation();
+
+  useEffect(() => {
+    setActiveUrl(window.location.pathname);
+  }, [appLocation]);
   return (
-    <Router>
+    
       <div className="App">
         {/* Navbar */}
-        <NavbarTop />
+        {activeUrl === "/user" ? <NavbarUser /> : <NavbarTop />}
         {/* Router  */}
         <Switch>
           <Route path="/" exact component={Home} />
@@ -28,7 +36,7 @@ function App() {
         {/* Footer */}
         <Footer />
       </div>
-    </Router>
+   
   );
 }
 
