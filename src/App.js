@@ -20,23 +20,22 @@ function App() {
   useEffect(() => {
     setActiveUrl(window.location.pathname);
   }, [appLocation]);
-  return (
-    
-      <div className="App">
-        {/* Navbar */}
-        {activeUrl === "/user" ? <NavbarUser /> : <NavbarTop />}
-        {/* Router  */}
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/wallet" component={Wallet} />
-          <Route path="/items" component={Items} />
-          <Route path="/user" component={User} />
-        </Switch>
 
-        {/* Footer */}
-        <Footer />
-      </div>
-   
+  return (
+    <div className="App">
+      {/* Navbar */}
+      {activeUrl === "/user" ? <NavbarUser /> : <NavbarTop />}
+      {/* Router  */}
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/wallet" component={Wallet} />
+        <Route path="/items" component={Items} />
+        <Route path="/user" component={User} />
+      </Switch>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
 

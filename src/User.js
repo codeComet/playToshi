@@ -139,7 +139,7 @@ function User() {
                 </React.Fragment>
               }
             >
-              <owned />
+              <Owned />
             </Tab>
           </Tabs>
         </div>

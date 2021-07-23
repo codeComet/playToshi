@@ -1,9 +1,33 @@
-import React from "react";
-import { Button, Tabs, Tab } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Button, Tabs, Tab, Modal } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Timer from "./Timer";
 import "./Items.css";
 
 function Items() {
+  const [show, setShow] = useState(false);
+  const [count, setCount] = useState(0);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const notify = () =>
+    toast.success("Bid Placed Sucessfully!!!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  useEffect(() => {
+    if (count < 0) {
+      setCount(0);
+    }
+  }, [count]);
+
   return (
     <div className="item-container">
       <div className="product-image">
@@ -19,7 +43,7 @@ function Items() {
             <Timer />
           </div>
         </div>
-        <Button>Place a Bid</Button>
+        <Button onClick={handleShow}>Place a Bid</Button>
       </div>
       <div className="product-details">
         <div className="name-price">
@@ -73,6 +97,51 @@ function Items() {
           </Tabs>
         </div>
       </div>
+
+      {/* Bidding Modal */}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Place Your Bid</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="bid_body">
+            <Button
+              variant="danger"
+              onClick={() => {
+                setCount(count - 1);
+              }}
+            >
+              -
+            </Button>
+            <h3>{count}</h3>
+            <Button
+              variant="success"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +
+            </Button>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="primary"
+            onClick={() => {
+              notify();
+              // setTimeout(function () {
+              //   handleClose();
+              // }, 2000);
+            }}
+          >
+            Place Bid
+          </Button>
+          <ToastContainer />
+        </Modal.Footer>
+      </Modal>
+
+      {/* Bootstrap confirmation message */}
     </div>
   );
 }
