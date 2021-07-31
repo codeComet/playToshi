@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Tab, Tabs, Badge } from "react-bootstrap";
 import "./User.css";
 import Auctions from "./Auctions";
-// import NavbarUser from "./NavbarUser";
+import { Link } from "react-router-dom";
 
 function User() {
   return (
@@ -48,7 +48,10 @@ function User() {
               </div>
             </div>
             <div className="buttons">
-              <Button className="edit-profile">Edit Profile</Button>
+              <Link to="/edit">
+                <Button className="edit-profile">Edit Profile</Button>
+              </Link>
+
               <Button className="upload-button">
                 <img
                   src="https://img.icons8.com/fluent-systems-filled/48/000000/upload.png"
