@@ -3,7 +3,7 @@
   color: #fff;
 }
 
-h1 {
+.profile h1 {
   margin: 40px auto 20px;
 }
 
@@ -17,8 +17,8 @@ h1 {
   margin: 40px auto;
 }
 
-.form-control,
-textarea {
+.profile .form-control,
+.profile textarea {
   width: 30%;
   margin: auto;
   font-size: 16px;
@@ -29,7 +29,7 @@ textarea {
   border: 1px solid #3e3e3e;
 }
 
-img {
+.profile img {
   width: 80px;
   border-radius: 50%;
 }
@@ -49,11 +49,11 @@ img {
   font-weight: bold;
 }
 
-.form-group {
+.profile .form-group {
   margin: 30px auto;
 }
 
-.form-text {
+.profile .form-text {
   margin: 0px auto 15px;
   color: #979797;
 }
