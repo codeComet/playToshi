@@ -4,3 +4,10 @@
   border-radius: 10px;
   margin: 20px auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .gallery img {
+    width: 250px;
+    height: 200px;
+  }
+}

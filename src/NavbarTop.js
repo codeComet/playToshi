@@ -113,7 +113,7 @@ function NavbarTop() {
                 type="text"
                 placeholder="First Name"
                 required
-                className="mb-sm-2"
+                className="mb-3"
               />
               <Form.Control type="text" placeholder="Last Name" required />
             </Form.Group>

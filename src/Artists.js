@@ -26,7 +26,7 @@ function Artists() {
         </div>
         <div className="parent">
           <div className="avatar">
-            <img src="./images/user8.jpg" alt="user1" />
+            <img src="./images/user4.jpg" alt="user1" />
           </div>
           <div className="desc">
             <h3 className="userName">Marcos Steele</h3>

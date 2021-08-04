@@ -12,6 +12,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import Items from "./Items";
 import User from "./User";
 import NavbarUser from "./NavbarUser";
+import EditProfile from "./EditProfile";
 
 function App() {
   const [activeUrl, setActiveUrl] = useState();
@@ -31,6 +32,7 @@ function App() {
         <Route path="/wallet" component={Wallet} />
         <Route path="/items" component={Items} />
         <Route path="/user" component={User} />
+        <Route path="/edit" component={EditProfile} />
       </Switch>
 
       {/* Footer */}

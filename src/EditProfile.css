@@ -1,0 +1,86 @@
+.profile {
+  text-align: center;
+  color: #fff;
+}
+
+.profile h1 {
+  margin: 40px auto 20px;
+}
+
+.profile p {
+  width: 40%;
+  margin: 20px auto;
+  color: #979797;
+}
+
+.upload-image {
+  margin: 40px auto;
+}
+
+.profile .form-control,
+.profile textarea {
+  width: 30%;
+  margin: auto;
+  font-size: 16px;
+  color: #fff;
+  background: #131313;
+  border-radius: 20px;
+  padding: 20px 15px;
+  border: 1px solid #3e3e3e;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile .btn {
+  margin: 20px auto 50px;
+  padding: 10px 15px;
+  background: #fc00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #00dbde,
+    #fc00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.profile .form-group {
+  margin: 30px auto;
+}
+
+.profile .form-text {
+  margin: 0px auto 15px;
+  color: #979797;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile p {
+    width: 95%;
+    margin: 20px auto;
+    color: #979797;
+  }
+
+  .profile .form-control,
+  .profile textarea {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile .form-control,
+  .profile textarea {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .profile .form-control,
+  .profile textarea {
+    width: 40%;
+  }
+}
